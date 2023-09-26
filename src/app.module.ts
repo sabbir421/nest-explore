@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { FeedModule } from './feed/feed.module';
 import { FeedService } from './feed/services/feed.service';
+import { UserModule } from './user/user.module';
 
 
 
@@ -22,7 +23,8 @@ import { FeedService } from './feed/services/feed.service';
       autoLoadEntities:true,
       synchronize:true,
     }),
-    FeedModule
+    FeedModule,
+    UserModule
     
   ],
   controllers: [AppController],
